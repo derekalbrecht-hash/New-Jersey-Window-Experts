@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos | New Jersey Window Experts</title>
+  <meta name="description" content="Watch NJ window and door installation videos, project walkthroughs, and educational content from New Jersey Window Experts.">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <style>
+    .videos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 44px; }
+    .video-card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; }
+    .video-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,0.14); }
+    .video-thumb { background: #1a1a1a; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative; }
+    .video-thumb i { font-size: 3rem; color: rgba(255,255,255,0.2); }
+    .video-thumb .play-btn { position: absolute; width: 56px; height: 56px; background: var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.2rem; padding-left: 4px; box-shadow: 0 4px 16px rgba(17,149,72,0.5); }
+    .upload-tag-vid { position: absolute; top: 10px; right: 10px; background: rgba(255,149,0,0.9); color: #fff; font-size: 0.68rem; font-weight: 700; padding: 4px 8px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .video-card-body { padding: 18px; }
+    .video-card-body .vid-cat { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--green); margin-bottom: 6px; }
+    .video-card-body h3 { font-family: 'Oswald', sans-serif; font-size: 1.05rem; font-weight: 700; text-transform: uppercase; color: var(--heading); margin-bottom: 8px; line-height: 1.3; }
+    .video-card-body p { font-size: 0.85rem; color: var(--text); line-height: 1.6; }
+    .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 0; justify-content: center; padding: 24px 0; background: #f5f5f5; border-bottom: 1px solid #e0e0e0; }
+    .filter-btn { font-family: 'Oswald', sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 8px 18px; border-radius: 6px; border: 2px solid #ddd; background: #fff; color: var(--heading); cursor: pointer; transition: 0.2s; text-decoration: none; }
+    .filter-btn:hover, .filter-btn.active { background: var(--green); color: #fff; border-color: var(--green); }
+    @media (max-width: 900px) { .videos-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .videos-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div id="top-bar">
+    <div class="inner">
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Google"><i class="fab fa-google"></i></a>
+      </div>
+      <div class="top-right">
+        <span style="font-size:0.8rem;">NJ HIC License #13VH07862200</span>
+        <a href="contact.html" class="top-cta"><i class="fas fa-envelope" style="margin-right:5px;"></i>Get a Free Quote</a>
+        <a href="tel:2018895864" class="top-phone"><i class="fas fa-phone"></i>(201) 889-5864</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header id="main-header">
+    <div class="inner">
+      <a href="index.html" class="logo-wrap">
+        <div class="logo-icon"><i class="fas fa-home"></i></div>
+        <div><div class="logo-text-main">New Jersey<br>Window Experts</div></div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="products.html">Products <i class="fas fa-chevron-down" style="font-size:0.65rem;"></i></a>
+            <div class="dropdown">
+              <a href="products.html#vinyl">Vinyl Windows</a>
+              <a href="products.html#fiberglass">Fiberglass Windows</a>
+              <a href="products.html#wood">Wood Windows</a>
+              <a href="products.html#entry-doors">Entry Doors</a>
+              <a href="products.html#patio-doors">Patio Doors</a>
+              <a href="products.html#sliding-doors">Sliding Doors</a>
+              <a href="products.html#storm">Storm Windows</a>
+              <a href="products.html#glass-block">Glass Block</a>
+            </div>
+          </li>
+          <li class="active"><a href="videos.html">Videos</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="nav-cta-btn">Free Estimate</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span></div>
+    </div>
+    <div id="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="videos.html">Videos</a>
+      <a href="about.html">About</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" style="color:var(--green);">Free Estimate</a>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="breadcrumb"><a href="index.html">Home</a> › Videos</div>
+    <h1>Our <span>Video Library</span></h1>
+    <p>Watch real NJ window and door installations, project walkthroughs, and tips from our experts. Upload your videos below.</p>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <a href="#" class="filter-btn active">All Videos</a>
+    <a href="#" class="filter-btn">Installations</a>
+    <a href="#" class="filter-btn">Before & After</a>
+    <a href="#" class="filter-btn">How-To Tips</a>
+    <a href="#" class="filter-btn">Customer Stories</a>
+  </div>
+
+  <!-- VIDEOS -->
+  <section style="background: #fff;">
+    <div class="container">
+      <div class="videos-grid">
+
+        <div class="video-card">
+          <div class="video-thumb">
+            <div class="play-btn"><i class="fas fa-play"></i></div>
+            <div class="upload-tag-vid">📹 Upload</div>
+          </div>
+          <div class="video-card-body">
+            <div class="vid-cat">Installation</div>
+            <h3>Full Window Replacement — Essex County Home</h3>
+            <p>Watch our crew replace 14 windows in a single day at a Maplewood colonial. Upload your video here.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-thumb">
+            <div class="play-btn"><i class="fas fa-play"></i></div>
+            <div class="upload-tag-vid">📹 Upload</div>
+          </div>
+          <div class="video-card-body">
+            <div class="vid-cat">Before & After</div>
+            <h3>Entry Door Transformation — Verona, NJ</h3>
+            <p>Before and after reveal of a stunning new fiberglass entry door with sidelites. Upload your video here.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-thumb">
+            <div class="play-btn"><i class="fas fa-play"></i></div>
+            <div class="upload-tag-vid">📹 Upload</div>
+          </div>
+          <div class="video-card-body">
+            <div class="vid-cat">How-To Tips</div>
+            <h3>How to Know When It's Time to Replace Your Windows</h3>
+            <p>Signs to watch for — drafts, condensation, sticking sashes, and rising energy bills. Upload your video here.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-thumb">
+            <div class="play-btn"><i class="fas fa-play"></i></div>
+            <div class="upload-tag-vid">📹 Upload</div>
+          </div>
+          <div class="video-card-body">
+            <div class="vid-cat">Customer Story</div>
+            <h3>Customer Review — Bloomfield Homeowner</h3>
+            <p>Hear what a happy Bloomfield customer had to say after their full window replacement. Upload your video here.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-thumb">
+            <div class="play-btn"><i class="fas fa-play"></i></div>
+            <div class="upload-tag-vid">📹 Upload</div>
+          </div>
+          <div class="video-card-body">
+            <div class="vid-cat">Installation</div>
+            <h3>Patio Door Installation — Nutley, NJ</h3>
+            <p>Full French patio door installation from start to finish in a Nutley split-level home. Upload your video here.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-thumb">
+            <div class="play-btn"><i class="fas fa-play"></i></div>
+            <div class="upload-tag-vid">📹 Upload</div>
+          </div>
+          <div class="video-card-body">
+            <div class="vid-cat">How-To Tips</div>
+            <h3>Vinyl vs. Fiberglass: Which Is Right for Your NJ Home?</h3>
+            <p>We break down the differences so you can make a confident buying decision. Upload your video here.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-banner">
+    <div class="container">
+      <h2>Ready to Get Started?</h2>
+      <p>Schedule a free, no-pressure in-home estimate with New Jersey's window experts.</p>
+      <a href="contact.html" class="btn-white">Get a Free Estimate</a>
+      <a href="tel:2018895864" class="btn-white-outline"><i class="fas fa-phone" style="margin-right:8px;"></i>(201) 889-5864</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo-name">New Jersey Window Experts</div>
+          <div class="footer-logo-sub">Window & Door Replacement</div>
+          <p class="footer-desc">NJ's trusted window and door replacement specialists. Family-owned, locally operated, and committed to quality across New Jersey.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="products.html#vinyl">Vinyl Windows</a></li>
+            <li><a href="products.html#fiberglass">Fiberglass Windows</a></li>
+            <li><a href="products.html#entry-doors">Entry Doors</a></li>
+            <li><a href="products.html#patio-doors">Patio Doors</a></li>
+            <li><a href="products.html#glass-block">Glass Block</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>452 Broad St<br>Bloomfield, NJ 07003</span></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:2018895864">(201) 889-5864</a></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Mon–Fri: 9AM–5PM<br>Sat: 10AM–3PM</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 New Jersey Window Experts. All rights reserved.</div>
+        <div style="display:flex;gap:16px;"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileNav() { document.getElementById('mobile-nav').classList.toggle('open'); }
+  </script>
+</body>
+</html>

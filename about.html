@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | New Jersey Window Experts</title>
+  <meta name="description" content="Family-owned NJ window and door replacement company with 20+ years serving Essex County, Bergen County, and all of New Jersey.">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <style>
+    .about-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .about-intro-image .upload-placeholder { aspect-ratio: 4/3; border-radius: 10px; }
+    .about-intro-text p { font-size: 0.97rem; color: var(--text); line-height: 1.8; margin-bottom: 16px; }
+    blockquote { border-left: 4px solid var(--green); padding-left: 18px; margin: 20px 0; font-style: italic; font-size: 1.05rem; color: var(--text); line-height: 1.7; }
+    .signature { font-family: 'Georgia', serif; font-size: 1.5rem; color: var(--green); margin-top: 20px; }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 44px; }
+    .value-card { background: #fff; border-radius: 10px; padding: 32px 24px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.07); border-top: 4px solid var(--green); }
+    .value-card .v-icon { width: 60px; height: 60px; background: var(--light-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 1.5rem; color: var(--green); }
+    .value-card h3 { font-family: 'Oswald', sans-serif; font-size: 1.05rem; font-weight: 700; text-transform: uppercase; color: var(--heading); margin-bottom: 10px; }
+    .value-card p { font-size: 0.88rem; color: var(--text); line-height: 1.65; }
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 44px; }
+    .team-card { text-align: center; }
+    .team-photo { border-radius: 10px; overflow: hidden; margin-bottom: 14px; }
+    .team-photo .upload-placeholder { aspect-ratio: 3/4; }
+    .team-card h4 { font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 700; text-transform: uppercase; color: var(--heading); margin-bottom: 4px; }
+    .team-card .role { font-size: 0.82rem; color: var(--green); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 44px; }
+    .stat-box { text-align: center; background: #fff; border-radius: 10px; padding: 32px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+    .stat-box strong { display: block; font-family: 'Oswald', sans-serif; font-size: 2.6rem; font-weight: 700; color: var(--green); line-height: 1; margin-bottom: 8px; }
+    .stat-box span { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text); font-weight: 700; }
+    @media (max-width: 900px) { .about-intro, .team-grid { grid-template-columns: 1fr; } .values-grid, .stats-row { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .values-grid, .stats-row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div id="top-bar">
+    <div class="inner">
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Google"><i class="fab fa-google"></i></a>
+      </div>
+      <div class="top-right">
+        <span style="font-size:0.8rem;">NJ HIC License #13VH07862200</span>
+        <a href="contact.html" class="top-cta"><i class="fas fa-envelope" style="margin-right:5px;"></i>Get a Free Quote</a>
+        <a href="tel:2018895864" class="top-phone"><i class="fas fa-phone"></i>(201) 889-5864</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header id="main-header">
+    <div class="inner">
+      <a href="index.html" class="logo-wrap">
+        <div class="logo-icon"><i class="fas fa-home"></i></div>
+        <div><div class="logo-text-main">New Jersey<br>Window Experts</div></div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="products.html">Products <i class="fas fa-chevron-down" style="font-size:0.65rem;"></i></a>
+            <div class="dropdown">
+              <a href="products.html#vinyl">Vinyl Windows</a>
+              <a href="products.html#fiberglass">Fiberglass Windows</a>
+              <a href="products.html#wood">Wood Windows</a>
+              <a href="products.html#entry-doors">Entry Doors</a>
+              <a href="products.html#patio-doors">Patio Doors</a>
+              <a href="products.html#sliding-doors">Sliding Doors</a>
+              <a href="products.html#storm">Storm Windows</a>
+              <a href="products.html#glass-block">Glass Block</a>
+            </div>
+          </li>
+          <li><a href="videos.html">Videos</a></li>
+          <li class="active"><a href="about.html">About</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="nav-cta-btn">Free Estimate</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span></div>
+    </div>
+    <div id="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="videos.html">Videos</a>
+      <a href="about.html">About</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" style="color:var(--green);">Free Estimate</a>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="breadcrumb"><a href="index.html">Home</a> › About</div>
+    <h1>About <span>New Jersey Window Experts</span></h1>
+    <p>Family-owned and locally rooted. We've been helping NJ homeowners since day one — one window at a time.</p>
+  </div>
+
+  <!-- ABOUT INTRO -->
+  <section style="background:#fff;">
+    <div class="container">
+      <div class="about-intro">
+        <div class="about-intro-image">
+          <div class="upload-placeholder" style="aspect-ratio:4/3;border-radius:10px;"><i class="fas fa-person" style="font-size:3rem;"></i><p>Upload owner / team photo here</p></div>
+        </div>
+        <div class="about-intro-text">
+          <div class="section-label">Our Story</div>
+          <h2 class="section-title">New Jersey's <span>Window Experts</span></h2>
+          <blockquote>"I started this company because NJ homeowners deserved better — better products, better service, and someone who actually shows up when they say they will."</blockquote>
+          <p>With over 20 years in the window and door industry, we've built our reputation one installation at a time. We're a family-owned business rooted in Essex County, serving customers from Bergen to Monmouth and everywhere in between.</p>
+          <p>We carry only the brands we believe in — products we'd install in our own homes. And because we do our own installations, we stand fully behind every project we complete.</p>
+          <p>When you call us, you talk to us — not a call center. We give honest advice, show up on time, and earn your business the right way.</p>
+          <div class="signature">— [Owner Name]</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section style="background: var(--bg-light);">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label">By the Numbers</div>
+        <h2 class="section-title">Our <span>Track Record</span></h2>
+      </div>
+      <div class="stats-row">
+        <div class="stat-box"><strong>500+</strong><span>Homes Served</span></div>
+        <div class="stat-box"><strong>20+</strong><span>Years in NJ</span></div>
+        <div class="stat-box"><strong>4.9★</strong><span>Avg. Review</span></div>
+        <div class="stat-box"><strong>A+</strong><span>BBB Rating</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section style="background:#fff;">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label">What Drives Us</div>
+        <h2 class="section-title">Our <span>Core Values</span></h2>
+        <p class="section-sub">Everything we do comes back to these principles.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="v-icon"><i class="fas fa-handshake"></i></div>
+          <h3>Honest Pricing</h3>
+          <p>No inflated "list prices" or fake discounts. You get a fair, written estimate — and we stick to it.</p>
+        </div>
+        <div class="value-card">
+          <div class="v-icon"><i class="fas fa-hammer"></i></div>
+          <h3>Expert Installation</h3>
+          <p>Our installers are trained employees, not subcontractors. Accountable to you from start to finish.</p>
+        </div>
+        <div class="value-card">
+          <div class="v-icon"><i class="fas fa-shield-halved"></i></div>
+          <h3>Backed by Warranty</h3>
+          <p>Both product and labor are fully warranted. If something goes wrong, we come back and fix it.</p>
+        </div>
+        <div class="value-card">
+          <div class="v-icon"><i class="fas fa-clock"></i></div>
+          <h3>We Show Up</h3>
+          <p>We arrive when we say we will, complete the job on schedule, and clean up before we leave.</p>
+        </div>
+        <div class="value-card">
+          <div class="v-icon"><i class="fas fa-leaf"></i></div>
+          <h3>Energy Efficiency</h3>
+          <p>Every product we recommend is Energy Star certified to help lower your NJ energy bills.</p>
+        </div>
+        <div class="value-card">
+          <div class="v-icon"><i class="fas fa-people-group"></i></div>
+          <h3>Community First</h3>
+          <p>We're local. We live here, raise our families here, and take pride in improving NJ homes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section style="background: var(--bg-light);">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label">The People Behind the Work</div>
+        <h2 class="section-title">Meet Our <span>Team</span></h2>
+        <p class="section-sub">Upload team member photos and names when you're ready.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-photo"><div class="upload-placeholder" style="aspect-ratio:3/4;"><i class="fas fa-person" style="font-size:2.5rem;"></i><p>Upload photo</p></div></div>
+          <h4>[Owner Name]</h4>
+          <div class="role">Owner / Founder</div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo"><div class="upload-placeholder" style="aspect-ratio:3/4;"><i class="fas fa-person" style="font-size:2.5rem;"></i><p>Upload photo</p></div></div>
+          <h4>[Team Member]</h4>
+          <div class="role">Lead Installer</div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo"><div class="upload-placeholder" style="aspect-ratio:3/4;"><i class="fas fa-person" style="font-size:2.5rem;"></i><p>Upload photo</p></div></div>
+          <h4>[Team Member]</h4>
+          <div class="role">Sales Consultant</div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo"><div class="upload-placeholder" style="aspect-ratio:3/4;"><i class="fas fa-person" style="font-size:2.5rem;"></i><p>Upload photo</p></div></div>
+          <h4>[Team Member]</h4>
+          <div class="role">Office Manager</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-banner">
+    <div class="container">
+      <h2>Let's Work Together</h2>
+      <p>Ready to experience the NJ Window Experts difference? Schedule your free in-home estimate today.</p>
+      <a href="contact.html" class="btn-white">Get a Free Estimate</a>
+      <a href="tel:2018895864" class="btn-white-outline"><i class="fas fa-phone" style="margin-right:8px;"></i>(201) 889-5864</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo-name">New Jersey Window Experts</div>
+          <div class="footer-logo-sub">Window & Door Replacement</div>
+          <p class="footer-desc">NJ's trusted window and door replacement specialists. Family-owned, locally operated, and committed to quality across New Jersey.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="products.html#vinyl">Vinyl Windows</a></li>
+            <li><a href="products.html#fiberglass">Fiberglass Windows</a></li>
+            <li><a href="products.html#entry-doors">Entry Doors</a></li>
+            <li><a href="products.html#patio-doors">Patio Doors</a></li>
+            <li><a href="products.html#glass-block">Glass Block</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>452 Broad St<br>Bloomfield, NJ 07003</span></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:2018895864">(201) 889-5864</a></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Mon–Fri: 9AM–5PM<br>Sat: 10AM–3PM</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 New Jersey Window Experts. All rights reserved.</div>
+        <div style="display:flex;gap:16px;"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileNav() { document.getElementById('mobile-nav').classList.toggle('open'); }
+  </script>
+</body>
+</html>
