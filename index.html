@@ -834,6 +834,18 @@
       padding: 8px 14px;
     }
 
+    /* ── BEFORE / AFTER SLIDER ── */
+    .ba-slider-wrap { margin-top: 44px; max-width: 860px; margin-left: auto; margin-right: auto; }
+    .ba-slider { position: relative; overflow: hidden; border-radius: 12px; cursor: ew-resize; user-select: none; -webkit-user-select: none; touch-action: none; box-shadow: 0 8px 40px rgba(0,0,0,0.2); }
+    .ba-after { display: block; width: 100%; height: auto; pointer-events: none; }
+    .ba-before-wrap { position: absolute; top: 0; left: 0; bottom: 0; width: 50%; overflow: hidden; pointer-events: none; }
+    .ba-before { display: block; height: 100%; width: auto; max-width: none; pointer-events: none; }
+    .ba-divider { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: rgba(255,255,255,0.95); transform: translateX(-50%); display: flex; align-items: center; justify-content: center; pointer-events: none; box-shadow: 0 0 10px rgba(0,0,0,0.35); }
+    .ba-handle { width: 54px; height: 54px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; gap: 4px; color: var(--green); font-size: 0.9rem; box-shadow: 0 2px 14px rgba(0,0,0,0.28); flex-shrink: 0; }
+    .ba-label { position: absolute; top: 16px; background: rgba(0,0,0,0.6); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; padding: 5px 14px; border-radius: 4px; pointer-events: none; }
+    .ba-label-before { left: 16px; }
+    .ba-label-after { right: 16px; }
+
     /* ══════════════════════════════════════
        SERVICE AREAS
     ══════════════════════════════════════ */
@@ -1320,39 +1332,29 @@
 
 
   <!-- ══════════════════════════════════════
-       BEFORE / AFTER GALLERY
+       BEFORE / AFTER SLIDER
   ══════════════════════════════════════ -->
-  <section id="gallery">
+  <section id="gallery" style="background:#fff;">
     <div class="container">
       <div class="text-center">
         <div class="section-label">Our Work</div>
-        <h2 class="section-title">Before & <span>After Gallery</span></h2>
-        <p class="section-sub">Real NJ homes. Real transformations. Upload your project photos and we'll showcase them here.</p>
+        <h2 class="section-title">Before & <span>After</span></h2>
+        <p class="section-sub">Drag the slider to see the transformation on a real New Jersey home.</p>
       </div>
-      <div class="gallery-grid">
-        <div class="gallery-item" style="background:none;">
-          <img src="assets/images/gallery/door2-before.jpeg" alt="Before — Entry Door Replacement" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;">
-          <div class="gallery-label">Before — Entry Door</div>
-        </div>
-        <div class="gallery-item" style="background:none;">
-          <img src="assets/images/gallery/door2-after-exterior.jpeg" alt="After — Entry Door Replacement" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;">
-          <div class="gallery-label">After — Entry Door</div>
-        </div>
-        <div class="gallery-item" style="background:none;">
-          <img src="assets/images/gallery/door1-exterior.jpeg" alt="Decorative Entry Door Installation" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;">
-          <div class="gallery-label">Entry Door Installation</div>
-        </div>
-        <div class="gallery-item" style="background:none;">
-          <img src="assets/images/gallery/windows-double.jpeg" alt="Double Window Replacement" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;">
-          <div class="gallery-label">Window Replacement</div>
-        </div>
-        <div class="gallery-item" style="background:none;">
-          <img src="assets/images/gallery/door4-exterior.jpeg" alt="Craftsman Entry Door" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;">
-          <div class="gallery-label">Craftsman Entry Door</div>
-        </div>
-        <div class="gallery-item" style="background:none;">
-          <img src="assets/images/gallery/door7.jpeg" alt="Custom Entry Door" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;">
-          <div class="gallery-label">Custom Entry Door</div>
+      <div class="ba-slider-wrap">
+        <div class="ba-slider" id="baSlider">
+          <img class="ba-after" src="assets/images/gallery/door2-after-exterior.jpeg" alt="After — Entry Door Replacement">
+          <div class="ba-before-wrap" id="baBeforeWrap">
+            <img class="ba-before" id="baBeforeImg" src="assets/images/gallery/door2-before.jpeg" alt="Before — Entry Door Replacement">
+          </div>
+          <div class="ba-divider" id="baDivider">
+            <div class="ba-handle">
+              <i class="fas fa-chevron-left"></i>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
         </div>
       </div>
     </div>
@@ -1573,6 +1575,42 @@
 
       const h1 = document.querySelector('.hero-headline');
       if (h1) Array.from(h1.childNodes).forEach(processNode);
+    })();
+
+    // ── BEFORE / AFTER SLIDER ──
+    (function() {
+      var slider = document.getElementById('baSlider');
+      if (!slider) return;
+      var beforeWrap = document.getElementById('baBeforeWrap');
+      var divider = document.getElementById('baDivider');
+      var beforeImg = document.getElementById('baBeforeImg');
+      var dragging = false;
+
+      function setPos(pct) {
+        pct = Math.min(95, Math.max(5, pct));
+        beforeWrap.style.width = pct + '%';
+        divider.style.left = pct + '%';
+      }
+
+      function syncBeforeImg() {
+        beforeImg.style.width = slider.offsetWidth + 'px';
+      }
+
+      function getPct(e) {
+        var rect = slider.getBoundingClientRect();
+        var x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+        return (x / rect.width) * 100;
+      }
+
+      slider.addEventListener('mousedown', function(e) { dragging = true; setPos(getPct(e)); e.preventDefault(); });
+      window.addEventListener('mousemove', function(e) { if (dragging) setPos(getPct(e)); });
+      window.addEventListener('mouseup', function() { dragging = false; });
+      slider.addEventListener('touchstart', function(e) { dragging = true; setPos(getPct(e)); }, { passive: true });
+      window.addEventListener('touchmove', function(e) { if (dragging) setPos(getPct(e)); }, { passive: true });
+      window.addEventListener('touchend', function() { dragging = false; });
+
+      syncBeforeImg();
+      window.addEventListener('resize', syncBeforeImg);
     })();
   </script>
 
