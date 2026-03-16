@@ -891,6 +891,20 @@
     .towns-grid a:hover { color: var(--green); }
 
     /* ══════════════════════════════════════
+       FAQ ACCORDION
+    ══════════════════════════════════════ */
+    .faq-item { border: 1px solid #e8e8e8; border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+    .faq-question { width: 100%; background: #fff; border: none; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; text-align: left; gap: 16px; transition: background 0.2s; }
+    .faq-question:hover { background: var(--bg-light); }
+    .faq-question.open { background: var(--bg-light); }
+    .faq-question span { font-family: 'Oswald', sans-serif; font-size: 1.05rem; font-weight: 700; text-transform: uppercase; color: var(--heading); letter-spacing: 0.3px; }
+    .faq-icon { color: var(--green); font-size: 0.85rem; flex-shrink: 0; transition: transform 0.3s ease; }
+    .faq-question.open .faq-icon { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; padding: 0 24px; }
+    .faq-answer.open { max-height: 600px; padding: 0 24px 20px; }
+    .faq-answer p { font-size: 0.92rem; color: var(--text); line-height: 1.7; }
+
+    /* ══════════════════════════════════════
        CTA BANNER
     ══════════════════════════════════════ */
     #cta-banner {
@@ -1374,24 +1388,47 @@
         <p class="section-sub">Everything you need to know before getting started.</p>
       </div>
       <div style="max-width:780px;margin:44px auto 0;">
-        <div style="border:1px solid #e8e8e8;border-radius:10px;overflow:hidden;">
-          <div style="padding:24px 28px;border-bottom:1px solid #e8e8e8;">
-            <h4 style="font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:700;text-transform:uppercase;color:var(--heading);margin-bottom:10px;">How long does window installation take?</h4>
-            <p style="font-size:0.92rem;color:var(--text);line-height:1.7;">Project timelines may vary depending on the specific products selected, manufacturer availability, and the scope of the installation. Because each manufacturer operates with different production schedules and delivery timeframes, estimated installation timelines will be provided once the final product selection and order have been confirmed. Our team works closely with trusted manufacturers to ensure projects are completed as efficiently as possible while maintaining the highest standards of quality and workmanship.</p>
-          </div>
-          <div style="padding:24px 28px;border-bottom:1px solid #e8e8e8;">
-            <h4 style="font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:700;text-transform:uppercase;color:var(--heading);margin-bottom:10px;">How much does window replacement cost?</h4>
-            <p style="font-size:0.92rem;color:var(--text);line-height:1.7;">Cost varies based on window type, size, material, and the number of windows being replaced. We provide free in-home estimates with no pressure — contact us and we'll give you a detailed, written quote tailored to your home.</p>
-          </div>
-          <div style="padding:24px 28px;border-bottom:1px solid #e8e8e8;">
-            <h4 style="font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:700;text-transform:uppercase;color:var(--heading);margin-bottom:10px;">Do new windows increase home value?</h4>
-            <p style="font-size:0.92rem;color:var(--text);line-height:1.7;">Yes — new windows are one of the best home improvement investments. They improve energy efficiency, curb appeal, and comfort, all of which contribute to higher home value. Energy-efficient windows can also reduce heating and cooling costs year-round.</p>
-          </div>
-          <div style="padding:24px 28px;">
-            <h4 style="font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:700;text-transform:uppercase;color:var(--heading);margin-bottom:10px;">What warranty coverage do you provide?</h4>
-            <p style="font-size:0.92rem;color:var(--text);line-height:1.7;">Warranty coverage for products installed by our company is determined by the individual manufacturer of each product. Because manufacturers offer different warranty terms, coverage periods, and conditions, the specific warranty details will vary depending on the materials selected for your project. We work exclusively with reputable manufacturers that stand behind their products, and full warranty documentation will be provided at the time of installation.</p>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>How long does window installation take?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Project timelines may vary depending on the specific products selected, manufacturer availability, and the scope of the installation. Because each manufacturer operates with different production schedules and delivery timeframes, estimated installation timelines will be provided once the final product selection and order have been confirmed. Our team works closely with trusted manufacturers to ensure projects are completed as efficiently as possible while maintaining the highest standards of quality and workmanship.</p>
           </div>
         </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>How much does window replacement cost?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Cost varies based on window type, size, material, and the number of windows being replaced. We provide free in-home estimates with no pressure — contact us and we'll give you a detailed, written quote tailored to your home.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Do new windows increase home value?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes — new windows are one of the best home improvement investments. They improve energy efficiency, curb appeal, and comfort, all of which contribute to higher home value. Energy-efficient windows can also reduce heating and cooling costs year-round.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>What warranty coverage do you provide?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Warranty coverage for products installed by our company is determined by the individual manufacturer of each product. Because manufacturers offer different warranty terms, coverage periods, and conditions, the specific warranty details will vary depending on the materials selected for your project. We work exclusively with reputable manufacturers that stand behind their products, and full warranty documentation will be provided at the time of installation.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -1531,6 +1568,22 @@
       const h1 = document.querySelector('.hero-headline');
       if (h1) Array.from(h1.childNodes).forEach(processNode);
     })();
+
+    // ── FAQ ACCORDION ──
+    function toggleFaq(btn) {
+      var answer = btn.nextElementSibling;
+      var isOpen = btn.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-question.open').forEach(function(b) {
+        b.classList.remove('open');
+        b.nextElementSibling.classList.remove('open');
+      });
+      // Open clicked if it was closed
+      if (!isOpen) {
+        btn.classList.add('open');
+        answer.classList.add('open');
+      }
+    }
 
     // ── BEFORE / AFTER SLIDER ──
     (function() {
