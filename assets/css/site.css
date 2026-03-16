@@ -35,9 +35,9 @@ img { max-width: 100%; display: block; }
 
 /* ── HEADER ── */
 #main-header { background: var(--dark-green); position: sticky; top: 0; z-index: 1000; }
-#main-header .inner { max-width: var(--container); margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 132px; }
+#main-header .inner { max-width: var(--container); margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 160px; }
 .logo-wrap { display: flex; align-items: center; cursor: pointer; }
-.logo-wrap img { max-width: 325px; max-height: 132px; width: auto; height: auto; display: block; }
+.logo-wrap img { max-width: 400px; max-height: 160px; width: auto; height: auto; display: block; }
 .logo-icon { width: 52px; height: 52px; background: var(--green); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.5rem; }
 .logo-text-main { font-family: 'Oswald', sans-serif; font-size: 1.35rem; font-weight: 700; color: #fff; line-height: 1.1; text-transform: uppercase; letter-spacing: 0.5px; }
 
