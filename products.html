@@ -14,19 +14,12 @@
     .tab-btn:hover, .tab-btn.active { background: var(--green); color: #fff; border-color: var(--green); }
     .product-section { padding: 60px 0; border-top: 1px solid #eee; scroll-margin-top: 160px; }
     .product-section:first-of-type { border-top: none; }
-    .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 32px; }
-    .product-grid.reverse { direction: rtl; }
-    .product-grid.reverse > * { direction: ltr; }
-    .product-image { border-radius: 10px; overflow: hidden; }
-    .product-image .upload-placeholder { aspect-ratio: 4/3; }
+    .product-info { max-width: 720px; margin: 0 auto; text-align: center; }
     .product-info h3 { font-family: 'Oswald', sans-serif; font-size: 1.6rem; font-weight: 700; text-transform: uppercase; color: var(--heading); margin-bottom: 10px; }
     .product-info p { font-size: 0.97rem; color: var(--text); line-height: 1.75; margin-bottom: 14px; }
-    .product-features { list-style: none; margin: 16px 0 24px; }
+    .product-features { list-style: none; margin: 16px 0 24px; display: inline-block; text-align: left; }
     .product-features li { font-size: 0.9rem; color: var(--text); padding: 5px 0; display: flex; align-items: center; gap: 8px; }
     .product-features li i { color: var(--green); font-size: 0.85rem; }
-    @media (max-width: 768px) {
-      .product-grid, .product-grid.reverse { grid-template-columns: 1fr; direction: ltr; }
-    }
   </style>
 </head>
 <body>
@@ -106,160 +99,129 @@
   <div class="container">
 
     <div id="vinyl" class="product-section">
-      <div class="product-grid">
-        <div class="product-info">
-          <div class="section-label">Windows</div>
-          <h3>Vinyl Windows</h3>
-          <p>Our most popular option for NJ homeowners. Vinyl windows are low-maintenance, energy-efficient, and built to handle New Jersey's cold winters and humid summers.</p>
-          <p>Available in dozens of styles — double-hung, casement, sliding, bay, bow, and more — in a full range of colors and finishes.</p>
-          <ul class="product-features">
-            <li><i class="fas fa-check"></i> Triple-pane glass options available</li>
-            <li><i class="fas fa-check"></i> Energy Star certified</li>
-            <li><i class="fas fa-check"></i> Low-E glass & argon gas fill</li>
-            <li><i class="fas fa-check"></i> Lifetime manufacturer warranty</li>
-            <li><i class="fas fa-check"></i> Multiple color & grid options</li>
-          </ul>
-          <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
-        </div>
+      <div class="product-info">
+        <div class="section-label">Windows</div>
+        <h3>Vinyl Windows</h3>
+        <p>Our most popular option for NJ homeowners. Vinyl windows are low-maintenance, energy-efficient, and built to handle New Jersey's cold winters and humid summers.</p>
+        <p>Available in dozens of styles — double-hung, casement, sliding, bay, bow, and more — in a full range of colors and finishes.</p>
+        <ul class="product-features">
+          <li><i class="fas fa-check"></i> Triple-pane glass options available</li>
+          <li><i class="fas fa-check"></i> Energy Star certified</li>
+          <li><i class="fas fa-check"></i> Low-E glass & argon gas fill</li>
+          <li><i class="fas fa-check"></i> Lifetime manufacturer warranty</li>
+          <li><i class="fas fa-check"></i> Multiple color & grid options</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
       </div>
     </div>
 
     <div id="fiberglass" class="product-section" style="background: var(--bg-light); margin: 0 -24px; padding: 60px 24px;">
-      <div class="product-grid reverse">
-        <div class="product-info">
-          <div class="section-label">Windows</div>
-          <h3>Fiberglass Windows</h3>
-          <p>The strongest, most dimensionally stable window material on the market. Fiberglass won't warp, swell, or rot — even in NJ's extreme seasonal temperature swings.</p>
-          <p>Ideal for historic homes or high-performance builds where longevity and energy performance are top priorities.</p>
-          <ul class="product-features">
-            <li><i class="fas fa-check"></i> 8x stronger than vinyl</li>
-            <li><i class="fas fa-check"></i> Won't warp, rot, or corrode</li>
-            <li><i class="fas fa-check"></i> Superior thermal performance</li>
-            <li><i class="fas fa-check"></i> Paintable interior & exterior</li>
-            <li><i class="fas fa-check"></i> Slim sightlines for more glass</li>
-          </ul>
-          <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
-        </div>
+      <div class="product-info">
+        <div class="section-label">Windows</div>
+        <h3>Fiberglass Windows</h3>
+        <p>The strongest, most dimensionally stable window material on the market. Fiberglass won't warp, swell, or rot — even in NJ's extreme seasonal temperature swings.</p>
+        <p>Ideal for historic homes or high-performance builds where longevity and energy performance are top priorities.</p>
+        <ul class="product-features">
+          <li><i class="fas fa-check"></i> 8x stronger than vinyl</li>
+          <li><i class="fas fa-check"></i> Won't warp, rot, or corrode</li>
+          <li><i class="fas fa-check"></i> Superior thermal performance</li>
+          <li><i class="fas fa-check"></i> Paintable interior & exterior</li>
+          <li><i class="fas fa-check"></i> Slim sightlines for more glass</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
       </div>
     </div>
 
     <div id="wood" class="product-section">
-      <div class="product-grid">
-        <div class="product-image">
-          <div class="upload-placeholder"><i class="fas fa-image"></i><p>Upload wood window photo</p></div>
-        </div>
-        <div class="product-info">
-          <div class="section-label">Windows</div>
-          <h3>Wood Windows</h3>
-          <p>The classic choice for character homes, historic restorations, and homeowners who love the warmth and beauty of natural wood.</p>
-          <p>We offer both solid wood and clad-wood options — aluminum or fiberglass clad exteriors protect the wood from the elements while preserving the beauty inside.</p>
-          <ul class="product-features">
-            <li><i class="fas fa-check"></i> Real wood interior warmth</li>
-            <li><i class="fas fa-check"></i> Aluminum or fiberglass clad exterior</li>
-            <li><i class="fas fa-check"></i> Interior stain or paint ready</li>
-            <li><i class="fas fa-check"></i> Ideal for historic & custom homes</li>
-          </ul>
-          <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
-        </div>
+      <div class="product-info">
+        <div class="section-label">Windows</div>
+        <h3>Wood Windows</h3>
+        <p>The classic choice for character homes, historic restorations, and homeowners who love the warmth and beauty of natural wood.</p>
+        <p>We offer both solid wood and clad-wood options — aluminum or fiberglass clad exteriors protect the wood from the elements while preserving the beauty inside.</p>
+        <ul class="product-features">
+          <li><i class="fas fa-check"></i> Real wood interior warmth</li>
+          <li><i class="fas fa-check"></i> Aluminum or fiberglass clad exterior</li>
+          <li><i class="fas fa-check"></i> Interior stain or paint ready</li>
+          <li><i class="fas fa-check"></i> Ideal for historic & custom homes</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
       </div>
     </div>
 
     <div id="entry-doors" class="product-section" style="background: var(--bg-light); margin: 0 -24px; padding: 60px 24px;">
-      <div class="product-grid reverse">
-        <div class="product-info">
-          <div class="section-label">Doors</div>
-          <h3>Entry Doors</h3>
-          <p>Your front door is the first thing guests see. We carry a full range of steel, fiberglass, and wood entry doors in hundreds of styles, finishes, and glass options.</p>
-          <p>From simple single-panel doors to grand double doors with sidelites and transoms — we'll find the perfect fit for your NJ home.</p>
-          <ul class="product-features">
-            <li><i class="fas fa-check"></i> Steel, fiberglass & wood options</li>
-            <li><i class="fas fa-check"></i> Hundreds of style & color choices</li>
-            <li><i class="fas fa-check"></i> Decorative glass inserts available</li>
-            <li><i class="fas fa-check"></i> Multi-point locking systems</li>
-            <li><i class="fas fa-check"></i> Sidelites & transoms available</li>
-          </ul>
-          <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
-        </div>
+      <div class="product-info">
+        <div class="section-label">Doors</div>
+        <h3>Entry Doors</h3>
+        <p>Your front door is the first thing guests see. We carry a full range of steel, fiberglass, and wood entry doors in hundreds of styles, finishes, and glass options.</p>
+        <p>From simple single-panel doors to grand double doors with sidelites and transoms — we'll find the perfect fit for your NJ home.</p>
+        <ul class="product-features">
+          <li><i class="fas fa-check"></i> Steel, fiberglass & wood options</li>
+          <li><i class="fas fa-check"></i> Hundreds of style & color choices</li>
+          <li><i class="fas fa-check"></i> Decorative glass inserts available</li>
+          <li><i class="fas fa-check"></i> Multi-point locking systems</li>
+          <li><i class="fas fa-check"></i> Sidelites & transoms available</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
       </div>
     </div>
 
     <div id="patio-doors" class="product-section">
-      <div class="product-grid">
-        <div class="product-image">
-          <div class="upload-placeholder"><i class="fas fa-image"></i><p>Upload patio door photo</p></div>
-        </div>
-        <div class="product-info">
-          <div class="section-label">Doors</div>
-          <h3>Patio & French Doors</h3>
-          <p>Open your home to the backyard beautifully. Our patio and French doors are available in swinging, folding, and sliding configurations to fit any space.</p>
-          <ul class="product-features">
-            <li><i class="fas fa-check"></i> French swing & folding options</li>
-            <li><i class="fas fa-check"></i> Energy-efficient glass packages</li>
-            <li><i class="fas fa-check"></i> Integrated blinds available</li>
-            <li><i class="fas fa-check"></i> Screen door options</li>
-          </ul>
-          <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
-        </div>
+      <div class="product-info">
+        <div class="section-label">Doors</div>
+        <h3>Patio & French Doors</h3>
+        <p>Open your home to the backyard beautifully. Our patio and French doors are available in swinging, folding, and sliding configurations to fit any space.</p>
+        <ul class="product-features">
+          <li><i class="fas fa-check"></i> French swing & folding options</li>
+          <li><i class="fas fa-check"></i> Energy-efficient glass packages</li>
+          <li><i class="fas fa-check"></i> Integrated blinds available</li>
+          <li><i class="fas fa-check"></i> Screen door options</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
       </div>
     </div>
 
     <div id="sliding-doors" class="product-section" style="background: var(--bg-light); margin: 0 -24px; padding: 60px 24px;">
-      <div class="product-grid reverse">
-        <div class="product-image">
-          <div class="upload-placeholder"><i class="fas fa-image"></i><p>Upload sliding door photo</p></div>
-        </div>
-        <div class="product-info">
-          <div class="section-label">Doors</div>
-          <h3>Sliding Doors</h3>
-          <p>Smooth-gliding sliding patio doors that maximize your view and bring in natural light. Available in 2-, 3-, and 4-panel configurations in vinyl and aluminum.</p>
-          <ul class="product-features">
-            <li><i class="fas fa-check"></i> Smooth low-friction glide system</li>
-            <li><i class="fas fa-check"></i> Multi-panel configurations</li>
-            <li><i class="fas fa-check"></i> Built-in screen options</li>
-            <li><i class="fas fa-check"></i> Keyed security lock</li>
-          </ul>
-          <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
-        </div>
+      <div class="product-info">
+        <div class="section-label">Doors</div>
+        <h3>Sliding Doors</h3>
+        <p>Smooth-gliding sliding patio doors that maximize your view and bring in natural light. Available in 2-, 3-, and 4-panel configurations in vinyl and aluminum.</p>
+        <ul class="product-features">
+          <li><i class="fas fa-check"></i> Smooth low-friction glide system</li>
+          <li><i class="fas fa-check"></i> Multi-panel configurations</li>
+          <li><i class="fas fa-check"></i> Built-in screen options</li>
+          <li><i class="fas fa-check"></i> Keyed security lock</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
       </div>
     </div>
 
     <div id="storm" class="product-section">
-      <div class="product-grid">
-        <div class="product-image">
-          <div class="upload-placeholder"><i class="fas fa-image"></i><p>Upload storm window photo</p></div>
-        </div>
-        <div class="product-info">
-          <div class="section-label">Windows</div>
-          <h3>Storm Windows</h3>
-          <p>Add a second layer of insulation and protection over your existing windows without a full replacement. A cost-effective solution for budget-conscious NJ homeowners.</p>
-          <ul class="product-features">
-            <li><i class="fas fa-check"></i> Interior & exterior styles</li>
-            <li><i class="fas fa-check"></i> Significant energy savings</li>
-            <li><i class="fas fa-check"></i> Noise reduction benefit</li>
-            <li><i class="fas fa-check"></i> Preserves original windows</li>
-          </ul>
-          <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
-        </div>
+      <div class="product-info">
+        <div class="section-label">Windows</div>
+        <h3>Storm Windows</h3>
+        <p>Add a second layer of insulation and protection over your existing windows without a full replacement. A cost-effective solution for budget-conscious NJ homeowners.</p>
+        <ul class="product-features">
+          <li><i class="fas fa-check"></i> Interior & exterior styles</li>
+          <li><i class="fas fa-check"></i> Significant energy savings</li>
+          <li><i class="fas fa-check"></i> Noise reduction benefit</li>
+          <li><i class="fas fa-check"></i> Preserves original windows</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
       </div>
     </div>
 
     <div id="glass-block" class="product-section" style="background: var(--bg-light); margin: 0 -24px; padding: 60px 24px;">
-      <div class="product-grid reverse">
-        <div class="product-image">
-          <div class="upload-placeholder"><i class="fas fa-image"></i><p>Upload glass block photo</p></div>
-        </div>
-        <div class="product-info">
-          <div class="section-label">Specialty</div>
-          <h3>Glass Block</h3>
-          <p>Beautiful, secure, and virtually maintenance-free. Glass block windows are perfect for basements, bathrooms, garages, and privacy areas throughout your NJ home.</p>
-          <ul class="product-features">
-            <li><i class="fas fa-check"></i> Mortar-set & frameless systems</li>
-            <li><i class="fas fa-check"></i> Vent units available</li>
-            <li><i class="fas fa-check"></i> Various patterns & opacity levels</li>
-            <li><i class="fas fa-check"></i> Excellent security & privacy</li>
-          </ul>
-          <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
-        </div>
+      <div class="product-info">
+        <div class="section-label">Specialty</div>
+        <h3>Glass Block</h3>
+        <p>Beautiful, secure, and virtually maintenance-free. Glass block windows are perfect for basements, bathrooms, garages, and privacy areas throughout your NJ home.</p>
+        <ul class="product-features">
+          <li><i class="fas fa-check"></i> Mortar-set & frameless systems</li>
+          <li><i class="fas fa-check"></i> Vent units available</li>
+          <li><i class="fas fa-check"></i> Various patterns & opacity levels</li>
+          <li><i class="fas fa-check"></i> Excellent security & privacy</li>
+        </ul>
+        <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
       </div>
     </div>
 
