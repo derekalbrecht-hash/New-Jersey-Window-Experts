@@ -49,7 +49,7 @@ nav ul li a::after { display: none; }
 nav ul li { position: relative; }
 nav ul li .dropdown { display: none; position: absolute; top: calc(100% + 4px); left: 0; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border-radius: 6px; border-top: 3px solid var(--green); min-width: 200px; padding: 8px 0; z-index: 100; }
 nav ul li:hover .dropdown { display: block; }
-nav ul li .dropdown a { display: block; padding: 8px 18px; font-size: 0.85rem; border-radius: 0; white-space: nowrap; background: none; color: var(--heading); }
+nav ul li .dropdown a { display: block; padding: 8px 18px; font-size: 0.85rem; border-radius: 0; white-space: nowrap; background: none; color: var(--heading) !important; }
 nav ul li .dropdown a:hover { background: var(--light-green); color: var(--green); }
 .nav-cta-btn { background: var(--green) !important; color: #fff !important; padding: 8px 16px !important; border-radius: 6px !important; }
 .nav-cta-btn:hover { background: #fff !important; color: var(--dark-green) !important; }
