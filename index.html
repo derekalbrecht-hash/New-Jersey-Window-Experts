@@ -1580,18 +1580,16 @@
       btn.disabled = true;
 
       var data = {
-        access_key: 'REPLACE_WITH_WEB3FORMS_ACCESS_KEY',
-        subject: 'New Quote Request — NJ Window Experts',
-        from_name: document.getElementById('q-name').value,
+        name: document.getElementById('q-name').value,
         email: document.getElementById('q-email').value,
         phone: document.getElementById('q-phone').value,
         zip: document.getElementById('q-zip').value
       };
 
       try {
-        var res = await fetch('https://api.web3forms.com/submit', {
+        var res = await fetch('/api/contact', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
         });
         var json = await res.json();

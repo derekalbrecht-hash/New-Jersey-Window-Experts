@@ -253,20 +253,18 @@
       btn.disabled = true;
 
       var data = {
-        access_key: 'REPLACE_WITH_WEB3FORMS_ACCESS_KEY',
-        subject: 'New Consultation Request — NJ Window Experts',
-        from_name: document.getElementById('first-name').value + ' ' + document.getElementById('last-name').value,
+        name: document.getElementById('first-name').value + ' ' + document.getElementById('last-name').value,
         email: document.getElementById('email').value,
         phone: document.getElementById('phone').value,
         zip: document.getElementById('zip').value,
         service: document.getElementById('service').value || 'Not specified',
-        message: document.getElementById('message').value || 'No message provided'
+        message: document.getElementById('message').value || ''
       };
 
       try {
-        var res = await fetch('https://api.web3forms.com/submit', {
+        var res = await fetch('/api/contact', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
         });
         var json = await res.json();
