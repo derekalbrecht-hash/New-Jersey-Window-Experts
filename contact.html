@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | New Jersey Window Experts</title>
+  <meta name="description" content="Contact New Jersey Window Experts for a free in-home window and door replacement estimate. Serving all of NJ.">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <style>
+    .contact-grid { display: grid; grid-template-columns: 1fr 420px; gap: 52px; align-items: start; }
+    .contact-form-card { background: #fff; border-radius: 12px; padding: 40px; box-shadow: 0 4px 24px rgba(0,0,0,0.1); }
+    .contact-form-card h2 { font-family: 'Oswald', sans-serif; font-size: 1.6rem; font-weight: 700; text-transform: uppercase; color: var(--heading); margin-bottom: 6px; }
+    .contact-form-card p { font-size: 0.9rem; color: var(--text); margin-bottom: 26px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-family: 'Oswald', sans-serif; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--heading); margin-bottom: 6px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 12px 14px; border: 2px solid #e0e0e0; border-radius: 6px;
+      font-family: 'Lato', sans-serif; font-size: 0.92rem; color: #2d2d2d;
+      outline: none; transition: border-color 0.2s; background: #fafafa;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--green); background: #fff; }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit { width: 100%; background: var(--green); color: #fff; font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 14px; border: none; border-radius: 6px; cursor: pointer; transition: background 0.2s; margin-top: 6px; }
+    .form-submit:hover { background: var(--dark-green); }
+    .form-disclaimer { font-size: 0.75rem; color: #999; text-align: center; margin-top: 10px; }
+    .contact-info-block { display: flex; flex-direction: column; gap: 20px; }
+    .info-card { background: #fff; border-radius: 10px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); display: flex; gap: 16px; align-items: flex-start; }
+    .info-card .info-icon { width: 46px; height: 46px; background: var(--light-green); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--green); font-size: 1.1rem; flex-shrink: 0; }
+    .info-card h4 { font-family: 'Oswald', sans-serif; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--heading); margin-bottom: 5px; }
+    .info-card p, .info-card a { font-size: 0.9rem; color: var(--text); line-height: 1.65; }
+    .info-card a { color: var(--green); font-weight: 700; }
+    .info-card a:hover { color: var(--dark-green); }
+    .map-placeholder { background: #d0d0d0; border-radius: 10px; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; flex-direction: column; color: #888; gap: 10px; margin-top: 24px; }
+    .map-placeholder i { font-size: 2.5rem; }
+    .map-placeholder p { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .success-msg { display: none; background: var(--light-green); border: 2px solid var(--green); border-radius: 8px; padding: 16px 20px; text-align: center; color: var(--dark-green); font-weight: 700; margin-top: 16px; }
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div id="top-bar">
+    <div class="inner">
+      <div class="top-right">
+        <a href="contact.html" class="top-cta"><i class="fas fa-envelope" style="margin-right:5px;"></i>Schedule a Consultation</a>
+        <a href="tel:9738998036" class="top-phone"><i class="fas fa-phone"></i>(973) 899-8036</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header id="main-header">
+    <div class="inner">
+      <a href="index.html" class="logo-wrap">
+        <img src="assets/images/logo/logo.png" alt="New Jersey Window Experts">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="products.html">Products <i class="fas fa-chevron-down" style="font-size:0.65rem;"></i></a>
+            <div class="dropdown">
+              <a href="products.html#vinyl">Vinyl Windows</a>
+              <a href="products.html#fiberglass">Fiberglass Windows</a>
+              <a href="products.html#wood">Wood Windows</a>
+              <a href="products.html#entry-doors">Entry Doors</a>
+              <a href="products.html#patio-doors">Patio Doors</a>
+              <a href="products.html#sliding-doors">Sliding Doors</a>
+              <a href="products.html#storm">Storm Windows</a>
+              <a href="products.html#glass-block">Glass Block</a>
+            </div>
+          </li>
+          <li class="active"><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="nav-cta-btn">Schedule a Consultation</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span></div>
+    </div>
+    <div id="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" style="color:var(--green);">Schedule a Consultation</a>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="breadcrumb"><a href="index.html">Home</a> › Contact</div>
+    <h1>Get Your <span>Schedule a Consultation</span></h1>
+    <p>Fill out the form below or call us directly. We'll schedule a free, no-pressure in-home consultation at your convenience.</p>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section style="background: var(--bg-light);">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- FORM -->
+        <div class="contact-form-card">
+          <h2>Schedule a Free In-Home Estimate</h2>
+          <p>We'll come to you, measure every opening, and give you a written estimate — same day, no obligation.</p>
+          <form id="contact-form" onsubmit="submitForm(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name *</label>
+                <input type="text" id="first-name" placeholder="John" required>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name *</label>
+                <input type="text" id="last-name" placeholder="Smith" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" placeholder="(201) 555-0000" required>
+              </div>
+              <div class="form-group">
+                <label for="zip">Zip Code *</label>
+                <input type="text" id="zip" placeholder="07003" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service">What are you interested in?</label>
+              <select id="service">
+                <option value="">— Select a product/service —</option>
+                <option>Vinyl Windows</option>
+                <option>Fiberglass Windows</option>
+                <option>Wood Windows</option>
+                <option>Entry Doors</option>
+                <option>Patio / French Doors</option>
+                <option>Sliding Doors</option>
+                <option>Storm Windows</option>
+                <option>Glass Block</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Tell us about your project</label>
+              <textarea id="message" placeholder="How many windows? Any specific concerns? Best time to reach you?"></textarea>
+            </div>
+            <button type="submit" class="form-submit">Schedule My Consultation →</button>
+            <p class="form-disclaimer">No spam, no pressure. We respect your privacy.</p>
+          </form>
+          <div class="success-msg" id="success-msg">
+            <i class="fas fa-circle-check" style="font-size:1.5rem;color:var(--green);display:block;margin-bottom:8px;"></i>
+            Thank you! We'll be in touch within 1 business day to schedule your free estimate.
+          </div>
+        </div>
+
+        <!-- CONTACT INFO -->
+        <div>
+          <div class="contact-info-block">
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h4>Call Us</h4>
+                <p><a href="tel:9738998036">(973) 899-8036</a></p>
+                <p style="font-size:0.82rem;color:#999;margin-top:4px;">Mon–Sat: 9AM–5PM</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h4>Service Area</h4>
+                <p>Serving All of New Jersey</p>
+                <p style="font-size:0.82rem;color:#999;margin-top:4px;">Mon–Sat: 9AM–5PM</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email Us</h4>
+                <p><a href="mailto:Michael@njwindowexperts.com">Michael@njwindowexperts.com</a></p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fas fa-shield-halved"></i></div>
+              <div>
+                <h4>Licensed & Insured</h4>
+                <p>Fully licensed &amp; insured in New Jersey</p>
+              </div>
+            </div>
+          </div>
+          <div class="map-placeholder">
+            <i class="fas fa-map-location-dot"></i>
+            <p>Embed Google Map here</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo-name">New Jersey Window Experts</div>
+          <div class="footer-logo-sub">Window & Door Replacement</div>
+          <p class="footer-desc">NJ's trusted window and door replacement specialists. Family-owned, locally operated, and committed to quality across New Jersey.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="products.html#vinyl">Vinyl Windows</a></li>
+            <li><a href="products.html#fiberglass">Fiberglass Windows</a></li>
+            <li><a href="products.html#entry-doors">Entry Doors</a></li>
+            <li><a href="products.html#patio-doors">Patio Doors</a></li>
+            <li><a href="products.html#glass-block">Glass Block</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>452 Broad St<br>Bloomfield, NJ 07003</span></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:9738998036">(973) 899-8036</a></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Mon–Sat: 9AM–5PM</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 New Jersey Window Experts. All rights reserved.</div>
+        <div style="display:flex;gap:16px;"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileNav() { document.getElementById('mobile-nav').classList.toggle('open'); }
+
+    async function submitForm(e) {
+      e.preventDefault();
+      var form = document.getElementById('contact-form');
+      var btn = form.querySelector('.form-submit');
+      var originalText = btn.textContent;
+
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      var data = {
+        access_key: 'REPLACE_WITH_WEB3FORMS_ACCESS_KEY',
+        subject: 'New Consultation Request — NJ Window Experts',
+        from_name: document.getElementById('first-name').value + ' ' + document.getElementById('last-name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        zip: document.getElementById('zip').value,
+        service: document.getElementById('service').value || 'Not specified',
+        message: document.getElementById('message').value || 'No message provided'
+      };
+
+      try {
+        var res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        var json = await res.json();
+        if (json.success) {
+          form.style.display = 'none';
+          document.getElementById('success-msg').style.display = 'block';
+        } else {
+          btn.textContent = originalText;
+          btn.disabled = false;
+          alert('Something went wrong. Please call us directly at (973) 899-8036.');
+        }
+      } catch (err) {
+        btn.textContent = originalText;
+        btn.disabled = false;
+        alert('Something went wrong. Please call us directly at (973) 899-8036.');
+      }
+    }
+  </script>
+</body>
+</html>
