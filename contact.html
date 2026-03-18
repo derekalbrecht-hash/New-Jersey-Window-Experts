@@ -252,20 +252,20 @@
       btn.textContent = 'Sending…';
       btn.disabled = true;
 
-      var data = {
-        name: document.getElementById('first-name').value + ' ' + document.getElementById('last-name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        zip: document.getElementById('zip').value,
-        service: document.getElementById('service').value || 'Not specified',
-        message: document.getElementById('message').value || ''
-      };
+      var formData = new FormData();
+      formData.append('access_key', 'f2eb6952-0d18-4b6a-878c-3cbb853ac033');
+      formData.append('subject', 'New Consultation Request — NJ Window Experts');
+      formData.append('name', document.getElementById('first-name').value + ' ' + document.getElementById('last-name').value);
+      formData.append('email', document.getElementById('email').value);
+      formData.append('phone', document.getElementById('phone').value);
+      formData.append('zip', document.getElementById('zip').value);
+      formData.append('service', document.getElementById('service').value || 'Not specified');
+      formData.append('message', document.getElementById('message').value || '');
 
       try {
-        var res = await fetch('/api/contact', {
+        var res = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
+          body: formData
         });
         var json = await res.json();
         if (json.success) {
